@@ -8,10 +8,12 @@ import 'dart:async';
 
 import 'package:new_test_app/model/category_response.dart';
 
+import '../model/api_response_model.dart';
+
 
 
 class ApiProvider {
-Future<CategoryResponse> categoryGet() async{
+Future<ApiResponse> getData() async{
   var url =
   Uri.http(apiUrl,pathExtender);
   var responseBody;
@@ -20,6 +22,6 @@ Future<CategoryResponse> categoryGet() async{
     responseBody = convert.jsonDecode(response.body) as Map<String, dynamic>;
   }
 
-  return CategoryResponse.fromJson(responseBody);
+  return ApiResponse.fromJson(responseBody);
 }
 }

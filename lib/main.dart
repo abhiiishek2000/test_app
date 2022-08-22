@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_test_app/pdf_test.dart';
 
 import 'category_screen.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const CategoryScreen(),
+      home: const PDFTest(),
     );
   }
 }
